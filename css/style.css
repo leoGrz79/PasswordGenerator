@@ -18,6 +18,9 @@ body, html {
 }
 
 #header {
+	border-bottom: 2px solid rgb(29, 39, 39);
+	border-radius: 50%;
+	height: 6vh;
 	font-family: 'Teko', sans-serif;
 	font-weight: 700;
 	letter-spacing: 5px;
@@ -47,8 +50,9 @@ body, html {
 
 #text-password {
 	text-align: center;
-	width: 100px;
-	
+	width: 210px;
+	height: 35px;
+	font-size: 30px;
 }
 
 .btn {
@@ -65,23 +69,16 @@ body, html {
 }
 
 .btn-run {
-	
-	/* background: #1e1e1e; */
-	/* background: #1c8801; */
-	/* background: radial-gradient(at center, #1c8801, #010101); */
-	background: radial-gradient(at center, rgba(25, 128, 0, 0.4), #010101);
+	background: radial-gradient(at center, rgba(233, 233, 233, 0.1), #010101);
 	cursor: pointer;
 	border: none;	
-	/* border: 2px solid green; */
 }
 
 .btn-clear {
 	background: #1e1e1e;
-	/* background: #880102; */
-	/* background: radial-gradient(at center, #880102, #010101); */
+	background: radial-gradient(at center, rgba(233, 233, 233, 0.1), #010101);
 	cursor: pointer;
 	border: none;	
-	/* border: 2px solid red; */
 }
 
 .btn-run:active {
@@ -101,7 +98,6 @@ body, html {
 
 
 #footer {
-	/* border-top: 2px solid #410000; */
 	border-top: 2px solid rgb(29, 39, 39);
 	border-radius: 50%;
 	text-align: center;
@@ -110,5 +106,4 @@ body, html {
 	bottom: 0;
 	width: 100%;
 	height: 3vh;
-	/* border: 1px solid yellow; */
 }

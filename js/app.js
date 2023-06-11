@@ -1,10 +1,16 @@
-const btn = document.getElementById("btn-password");
+const btnRun = document.getElementById("btn-run");
+const btnClear = document.getElementById("btn-clear");
 const password = document.getElementById("text-password");
 const h2 = document.querySelector("H2");
 
-btn.addEventListener("click", function () {
+btnRun.addEventListener("click", function () {
 	password.value = passwordGenerator(10);
 });
+
+btnClear.addEventListener("click", function () {
+	password.value = '';
+});
+
 
 
 function passwordGenerator(chars) {  
