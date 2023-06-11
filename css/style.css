@@ -1,6 +1,5 @@
 * {
 	box-sizing: border-box;
-	
 }
 
 body, html {
@@ -15,8 +14,7 @@ body, html {
 .bg {	
 	background-image: url("../img/background_resize.jpg");
 	height: 100%;
-	/* filter: blur(95px); */
-	filter: opacity(20%);
+	filter: opacity(20%) blur(8px);
 }
 
 #header {
@@ -54,36 +52,53 @@ body, html {
 }
 
 .btn {
-	text-transform: uppercase;
 	color: white;
-	font-size: 50px;
+	font-size: 15px;
 	text-align: center;
 	position: relative;
 	top: 10px;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	padding: 0.2rem;
-}
-
-.password {
-	background: #880102;
-	background: radial-gradient(at center, #880102, #010101);
-	cursor: pointer;
-	border: none;
-}
-
-#btn-clear {
 	margin: 0 30px;
 }
 
-#btn-password:active {
+.btn-run {
+	
+	/* background: #1e1e1e; */
+	/* background: #1c8801; */
+	/* background: radial-gradient(at center, #1c8801, #010101); */
+	background: radial-gradient(at center, rgba(25, 128, 0, 0.4), #010101);
+	cursor: pointer;
+	border: none;	
+	/* border: 2px solid green; */
+}
+
+.btn-clear {
+	background: #1e1e1e;
+	/* background: #880102; */
+	/* background: radial-gradient(at center, #880102, #010101); */
+	cursor: pointer;
+	border: none;	
 	/* border: 2px solid red; */
-	text-shadow: 0 1px 1px rgb(0, 255, 0);
+}
+
+.btn-run:active {
+	border: 2px solid green;
+	background: #880102;
+	background: radial-gradient(at center, #1c8801, #010101);
+  transform: translateY(2px);
+}
+
+.btn-clear:active {
+	border: 2px solid red;
+	text-shadow: 2px 2px 5px rgb(255, 0, 0);
 	background: #880102;
 	background: radial-gradient(at center, #ff0000, #000000);
   transform: translateY(2px);
 }
+
 
 #footer {
 	/* border-top: 2px solid #410000; */
