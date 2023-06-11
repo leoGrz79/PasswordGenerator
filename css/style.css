@@ -57,19 +57,31 @@ body, html {
 	backdrop-filter: blur(8px);
 }
 
+h2 {
+	text-align: center;
+	width: 300px;
+}
+
 #text-password {
 	color: white;
-	border: none;
-	/* border-bottom: 3px solid rgba(29, 39, 39, 0.5);
-	border-top: none;
+	/* border: none; */
+	border-bottom: 3px solid rgba(29, 39, 39, 0.5);
+	/* border-top: none;
 	border-left: none;
 	border-right: none; */
-	background-color: rgba(0, 0, 0, 0);
+	/* background-color: rgba(0, 0, 0, 0); */
 	text-align: center;
 	width: 220px;
 	height: 35px;
 	font-size: 30px;
+	/* border: 1px solid red; */
 }
+
+/* #text-password::after {	
+	content:"📋";
+	position: ;
+	left: 10px;
+} */
 
 .btn {
 	color: white;
