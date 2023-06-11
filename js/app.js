@@ -2,30 +2,7 @@ const btnRun = document.getElementById("btn-run");
 const btnClear = document.getElementById("btn-clear");
 const password = document.getElementById("text-password");
 const h2 = document.querySelector("H2");
-const specialChars = document.getElementById("special-chars");
-const upperCase = document.getElementById("upperCase");
-const lowerCase = document.getElementById("lowerCase");
-
-specialChars.addEventListener("click", () => {
-	alert(specialChars.getAttribute('color'));
-	// if (specialChars.style.color = 'green')
-	// 	specialChars.style.color = 'white';
-	// else
-	// 	specialChars.style.color = 'green';	
-})
-
-
-btnRun.addEventListener("click", () => {
-	password.value = passwordGenerator(10);
-	h2.innerHTML = 'your password is:';
-});
-
-btnClear.addEventListener("click", () => {
-	password.value = '';
-	h2.innerHTML = 'click RUN to generate a password';
-});
-
-
+const spans = document.querySelectorAll("span");
 
 function passwordGenerator(chars) {  
 	let password = '';
@@ -37,4 +14,26 @@ function passwordGenerator(chars) {
 	return password;
 }
 
-console.log(passwordGenerator(10));
+spans.forEach(span => {
+	span.addEventListener("click", () => {
+		if (!span.classList.contains('makeGolden')) {
+			span.classList.add('makeGolden');
+			span.classList.remove('makeWhite');
+		} else {
+			if (!span.classList.contains('makeWhite')) {
+				span.classList.add('makeWhite');
+				span.classList.remove('makeGolden');
+		}
+	}
+	});
+});
+
+btnRun.addEventListener("click", () => {
+	password.value = passwordGenerator(10);
+	h2.innerHTML = 'your password is:';
+});
+
+btnClear.addEventListener("click", () => {
+	password.value = '';
+	h2.innerHTML = 'click RUN to generate a password';
+});

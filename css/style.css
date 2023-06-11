@@ -11,6 +11,14 @@ body, html {
 	font-family: 'Rajdhani', sans-serif;
 }
 
+.makeGolden {
+	color: #f5c45b;
+}
+
+.makeWhite {
+	color: white;
+}
+
 .bg {	
 	background-image: url("../img/background_resize.jpg");
 	height: 100%;
@@ -125,7 +133,7 @@ body, html {
 
 span:hover {
 	cursor: pointer;
-	text-shadow: rgb(0, 255, 0) 0px 2px 5px;
+	text-shadow: #f5c45b 0px 2px 3px;
 }
 
 
