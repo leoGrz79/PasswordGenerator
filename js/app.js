@@ -5,10 +5,12 @@ const h2 = document.querySelector("H2");
 
 btnRun.addEventListener("click", function () {
 	password.value = passwordGenerator(10);
+	h2.innerHTML = 'your password is:';
 });
 
 btnClear.addEventListener("click", function () {
 	password.value = '';
+	h2.innerHTML = 'click RUN to generate a password';
 });
 
 

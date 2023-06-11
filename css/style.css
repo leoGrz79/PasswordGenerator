@@ -20,7 +20,8 @@ body, html {
 #header {
 	border-bottom: 2px solid rgb(29, 39, 39);
 	border-radius: 50%;
-	height: 6vh;
+	min-height: 60px;
+	height: 60px;
 	font-family: 'Teko', sans-serif;
 	font-weight: 700;
 	letter-spacing: 5px;
@@ -42,13 +43,20 @@ body, html {
 	top: 50%;
 	left: 50%;
 	width: 30%;
-	height: 30%;
+	height: 35%;
 	transform: translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(8px);
 }
 
 #text-password {
+	color: white;
+	border: none;
+	/* border-bottom: 3px solid rgba(29, 39, 39, 0.5);
+	border-top: none;
+	border-left: none;
+	border-right: none; */
+	background-color: rgba(0, 0, 0, 0);
 	text-align: center;
 	width: 220px;
 	height: 35px;
@@ -61,8 +69,8 @@ body, html {
 	text-align: center;
 	position: relative;
 	top: 10px;
-	width: 80px;
-	height: 80px;
+	width: 70px;
+	height: 70px;
 	border-radius: 50%;
 	padding: 0.2rem;
 	margin: 0 30px;
@@ -96,6 +104,24 @@ body, html {
   transform: translateY(2px);
 }
 
+.options::before {
+	position: absolute;
+	margin-top: 2px;
+	content: "";
+	top: -10px;
+	background: rgba(29, 39, 39, 0.5);
+	width: 500px;
+	height: 3px;
+}
+
+.options {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	position: relative;
+	top: 45px;	
+}
 
 #footer {
 	border-top: 2px solid rgb(29, 39, 39);
