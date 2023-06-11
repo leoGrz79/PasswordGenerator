@@ -1,3 +1,12 @@
+const btn = document.getElementById("btn-password");
+const password = document.getElementById("text-password");
+const h2 = document.querySelector("H2");
+
+btn.addEventListener("click", function () {
+	password.value = passwordGenerator(10);
+});
+
+
 function passwordGenerator(chars) {  
 	let password = '';
 	let randomNumber = 0;
