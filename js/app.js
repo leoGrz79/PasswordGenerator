@@ -2,13 +2,25 @@ const btnRun = document.getElementById("btn-run");
 const btnClear = document.getElementById("btn-clear");
 const password = document.getElementById("text-password");
 const h2 = document.querySelector("H2");
+const specialChars = document.getElementById("special-chars");
+const upperCase = document.getElementById("upperCase");
+const lowerCase = document.getElementById("lowerCase");
 
-btnRun.addEventListener("click", function () {
+specialChars.addEventListener("click", () => {
+	alert(specialChars.getAttribute('color'));
+	// if (specialChars.style.color = 'green')
+	// 	specialChars.style.color = 'white';
+	// else
+	// 	specialChars.style.color = 'green';	
+})
+
+
+btnRun.addEventListener("click", () => {
 	password.value = passwordGenerator(10);
 	h2.innerHTML = 'your password is:';
 });
 
-btnClear.addEventListener("click", function () {
+btnClear.addEventListener("click", () => {
 	password.value = '';
 	h2.innerHTML = 'click RUN to generate a password';
 });
