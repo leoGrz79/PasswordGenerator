@@ -4,15 +4,18 @@
 
 body, html {
 	/* with a helping hand from css-gradient.com */
-	background: #350303;
-	background: radial-gradient(at center, #350303, #010101);
+	background: radial-gradient(at center, #03351c, #010101);
+	/* background: radial-gradient(at center, #003a1d, #010101); */
+	/* vermelho bordeau */
+	/* background: #350303;
+	background: radial-gradient(at center, #350303, #010101); */
 	height: 100%;
 	margin: 0;
 	font-family: 'Rajdhani', sans-serif;
 }
 
 .makeGolden {
-	color: #f5c45b;
+	color: #ffee00;
 }
 
 .makeWhite {
@@ -57,31 +60,25 @@ body, html {
 	backdrop-filter: blur(8px);
 }
 
-h2 {
+#howManyCharsLabel {
 	text-align: center;
-	width: 300px;
+	width: 300px;	
 }
 
 #text-password {
 	color: white;
-	/* border: none; */
-	border-bottom: 3px solid rgba(29, 39, 39, 0.5);
-	/* border-top: none;
-	border-left: none;
-	border-right: none; */
-	/* background-color: rgba(0, 0, 0, 0); */
+	/* border-bottom: 3px solid rgba(29, 39, 39, 0.5); */
 	text-align: center;
-	width: 220px;
-	height: 35px;
-	font-size: 30px;
-	/* border: 1px solid red; */
+	width: 250px;
+	height: 15px;
 }
 
-/* #text-password::after {	
+#text-password::after {	
 	content:"📋";
-	position: ;
-	left: 10px;
-} */
+	position: absolute;
+	right: 100px;
+	
+}
 
 .btn {
 	color: white;
@@ -143,9 +140,10 @@ h2 {
 	top: 45px;	
 }
 
-span:hover {
+.option:hover {
 	cursor: pointer;
-	text-shadow: #f5c45b 0px 2px 3px;
+	/* text-shadow: #f5c45b 2px 2px 6px; */
+	text-shadow: #ffee00 2px 2px 5px;
 }
 
 

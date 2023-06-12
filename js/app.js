@@ -1,7 +1,7 @@
 const btnRun = document.getElementById("btn-run");
 const btnClear = document.getElementById("btn-clear");
 const password = document.getElementById("text-password");
-const h2 = document.querySelector("H2");
+const passwordLabel = document.getElementById("passwordLabel");
 const options = document.querySelectorAll(".option");
 
 function passwordGenerator(chars) {  
@@ -30,10 +30,10 @@ options.forEach(opt => {
 
 btnRun.addEventListener("click", () => {
 	password.innerHTML = passwordGenerator(10);
-	h2.innerHTML = 'your password is:';
+	passwordLabel.innerHTML = 'your password is:';
 });
 
 btnClear.addEventListener("click", () => {
 	password.innerHTML = '';
-	h2.innerHTML = 'click RUN to generate a password';
+	passwordLabel.innerHTML = 'click RUN to generate a password';
 });
