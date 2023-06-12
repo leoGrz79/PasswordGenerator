@@ -2,9 +2,10 @@ const btnRun = document.getElementById("btn-run");
 const btnClear = document.getElementById("btn-clear");
 const password = document.getElementById("text-password");
 const passwordLabel = document.getElementById("passwordLabel");
+const howManyChars = document.getElementById("howManyCharsRange");
 const options = document.querySelectorAll(".option");
 
-function passwordGenerator(chars) {  
+function passwordGenerator(chars) {
 	let password = '';
 	let randomNumber = 0;
   for (i = 0; i < chars ; i += 1) {
@@ -12,6 +13,11 @@ function passwordGenerator(chars) {
 		password += String.fromCharCode(randomNumber);
   }
 	return password;
+}
+
+function copyToClipboard() {
+	console.log(password.innerHTML);
+	navigator.clipboard.writeText(password.innerHTML);
 }
 
 options.forEach(opt => {
@@ -28,12 +34,20 @@ options.forEach(opt => {
 	});
 });
 
-btnRun.addEventListener("click", () => {
-	password.innerHTML = passwordGenerator(10);
+password.addEventListener("click", () => {
+	copyToClipboard();
+	password.setAttribute('title','copied!');
+})
+
+btnRun.addEventListener("click", () => {	
+	password.innerHTML = passwordGenerator(howManyChars.value);
 	passwordLabel.innerHTML = 'your password is:';
+	password.setAttribute('title','copy to clipboard');
 });
 
 btnClear.addEventListener("click", () => {
+	howManyChars.value = '0';
 	password.innerHTML = '';
 	passwordLabel.innerHTML = 'click RUN to generate a password';
+	password.setAttribute('title','copy to clipboard');
 });
