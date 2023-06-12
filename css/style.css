@@ -3,12 +3,18 @@
 }
 
 body, html {
-	/* with a helping hand from css-gradient.com */
-	background: #350303;
-	background: radial-gradient(at center, #350303, #010101);
+	background: radial-gradient(at center, #03351c, #010101);
 	height: 100%;
 	margin: 0;
 	font-family: 'Rajdhani', sans-serif;
+}
+
+.makeGolden {
+	color: #ffee00;
+}
+
+.makeWhite {
+	color: white;
 }
 
 .bg {	
@@ -20,7 +26,8 @@ body, html {
 #header {
 	border-bottom: 2px solid rgb(29, 39, 39);
 	border-radius: 50%;
-	height: 6vh;
+	min-height: 60px;
+	height: 60px;
 	font-family: 'Teko', sans-serif;
 	font-weight: 700;
 	letter-spacing: 5px;
@@ -42,17 +49,34 @@ body, html {
 	top: 50%;
 	left: 50%;
 	width: 30%;
-	height: 30%;
+	height: 35%;
 	transform: translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(8px);
+	border-radius: 25px;
+}
+
+#howManyCharsLabel {
+	text-align: center;
+	width: 300px;	
 }
 
 #text-password {
+	color: white;
+	/* border-bottom: 3px solid rgba(29, 39, 39, 0.5); */
 	text-align: center;
-	width: 210px;
-	height: 35px;
-	font-size: 30px;
+	width: 250px;
+	height: 15px;
+	user-select: none;
+	pointer-events: none;
+}
+
+#text-password::after {	
+	content:"📋";
+	position: absolute;
+	right: 100px;
+	pointer-events: all;
+	cursor: pointer;
 }
 
 .btn {
@@ -61,8 +85,8 @@ body, html {
 	text-align: center;
 	position: relative;
 	top: 10px;
-	width: 80px;
-	height: 80px;
+	width: 70px;
+	height: 70px;
 	border-radius: 50%;
 	padding: 0.2rem;
 	margin: 0 30px;
@@ -96,6 +120,29 @@ body, html {
   transform: translateY(2px);
 }
 
+.options::before {
+	position: absolute;
+	margin-top: 2px;
+	content: "";
+	top: -10px;
+	background: rgba(29, 39, 39, 0.5);
+	width: 500px;
+	height: 3px;
+}
+
+.options {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	position: relative;
+	top: 45px;	
+}
+
+.option:hover {
+	cursor: pointer;
+	text-shadow: #ffee00 2px 2px 5px;
+}
 
 #footer {
 	border-top: 2px solid rgb(29, 39, 39);
