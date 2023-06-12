@@ -3,12 +3,7 @@
 }
 
 body, html {
-	/* with a helping hand from css-gradient.com */
 	background: radial-gradient(at center, #03351c, #010101);
-	/* background: radial-gradient(at center, #003a1d, #010101); */
-	/* vermelho bordeau */
-	/* background: #350303;
-	background: radial-gradient(at center, #350303, #010101); */
 	height: 100%;
 	margin: 0;
 	font-family: 'Rajdhani', sans-serif;
@@ -146,10 +141,8 @@ body, html {
 
 .option:hover {
 	cursor: pointer;
-	/* text-shadow: #f5c45b 2px 2px 6px; */
 	text-shadow: #ffee00 2px 2px 5px;
 }
-
 
 #footer {
 	border-top: 2px solid rgb(29, 39, 39);

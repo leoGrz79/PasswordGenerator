@@ -5,6 +5,14 @@ const passwordLabel = document.getElementById("passwordLabel");
 const howManyChars = document.getElementById("howManyCharsRange");
 const options = document.querySelectorAll(".option");
 
+/*
+Function to generate the random numbers. Make 3. Usar chars.substring??
+1 - lowercase
+2 - uppercase
+3 - numbers + special chars
+
+*/
+
 function passwordGenerator(chars) {
 	let password = '';
 	let randomNumber = 0;
